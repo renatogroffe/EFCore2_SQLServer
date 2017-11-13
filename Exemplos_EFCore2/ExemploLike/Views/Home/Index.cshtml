@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Utilizando Like no Entity Framework Core 2.0</h2>
+
+@model IEnumerable<ExemploLike.Capital>
+
+<div class="table-responsive" style="padding: 25px;">
+    <table class="table table-hover">
+        <tr>
+            <th>Estado</th>
+            <th>Capital</th>
+            <th>Região</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Estado (@item.SiglaEstado)
+                </td>
+                <td>
+                    @item.NomeCidade
+                </td>
+                <td>
+                    @item.Regiao
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
